@@ -191,6 +191,52 @@ video {
   cursor: pointer;
 }
 
+/* Navbar Mobile */
+@media (max-width: 768px) {
+  .navbar-fixed-mobile {
+    padding: 0 10px; 
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  }
+
+  .logo-mobile-header {
+    margin-right: 20px; 
+  }
+
+  .contact-btn {
+    margin-left: 10px; 
+  }
+
+   body {
+    overflow-x: hidden; 
+  }
+}
+
+/* NAVBAR MENU MOBILE - Para telas pequenas (celulares pequenos) */
+@media (max-width: 480px) {
+  .navbar-fixed-mobile {
+    padding: 0 10px; 
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-mobile-header {
+    margin-right: 20px; 
+  }
+
+  .contact-btn {
+    margin-left: 10px; 
+  }
+}
+
 /* Hero Text */
 .hero-text {
   position: relative;
@@ -1488,4 +1534,5 @@ video {
   .footer-links-column {
     transform: none;
   }
+
 }
