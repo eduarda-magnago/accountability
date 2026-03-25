@@ -652,16 +652,24 @@ body {
     font-size: 35px;
   }
 
+  .value-item {
+    display: flex;
+    gap: 12px;
+  }
+
+  .value-item > div {
+    min-width: 0;
+  }
+
   .value-subtitle{
-    font-size: 15px;
+    font-size: 22px; 
   }
 
   .value-description{
-    font-size: 10px !important;
+    font-size: 16px; 
+    line-height: 1.6;
     text-align: justify;
-    text-justify: inter-word;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
   }
 }
 
@@ -674,10 +682,6 @@ body {
 
   .values-image {
     max-width: 100%;
-  }
-
-  .value-description {
-    font-size: 20px;
   }
 }
 
