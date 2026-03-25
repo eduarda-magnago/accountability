@@ -14,20 +14,17 @@ window.addEventListener("load", function () {
   if (titleEl) {
     const words = phrase.split(" ");
     titleEl.innerHTML = words
-      .map(word => `<span class="word">${word}</span>`)
+      .map(word => `<span class="word" style="opacity:0; display:inline-block; transition: opacity 0.3s;">${word}</span>`)
       .join(" ");
+
+    const wordEls = titleEl.querySelectorAll(".word");
+    wordEls.forEach((word, index) => {
+      setTimeout(() => {
+        word.style.opacity = "1";
+      }, index * 100); 
+    });
   }
 });
-
-const hamburger = document.getElementById("hamburger");
-const mobileMenu = document.getElementById("mobileMenu");
-
-if (hamburger && mobileMenu) {
-  hamburger.addEventListener("click", () => {
-    mobileMenu.style.display =
-      mobileMenu.style.display === "flex" ? "none" : "flex";
-  });
-}
 
 function animateWords() {
   const titleEl = document.getElementById("animated-title");
