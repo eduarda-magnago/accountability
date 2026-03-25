@@ -615,23 +615,6 @@ body {
   text-justify: inter-word;
 }
 
-.saiba-mais-btn {
-  background-color: #2A2A2A;
-  color: rgb(255, 255, 255);
-  font-size: 25px;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
-  padding: 14px 30px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.saiba-mais-btn:hover {
-  opacity: 0.9;
-}
-
 .values-image {
   flex: 1;
   min-width: 300px;
@@ -670,6 +653,11 @@ body {
     line-height: 1.6;
     text-align: justify;
     overflow-wrap: anywhere;
+  }
+
+  .values-text {
+    min-width: 100%;  
+    max-width: 100%;
   }
 }
 
