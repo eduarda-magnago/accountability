@@ -653,11 +653,11 @@ body {
   }
 
   .value-subtitle{
-    font-size: 23px;
+    font-size: 15px;
   }
 
   .value-description{
-    font-size: 15px !important;
+    font-size: 10px !important;
     text-align: justify;
     text-justify: inter-word;
     word-wrap: break-word;
