@@ -1,8 +1,4 @@
-/* ==============================
-   PRELOADER + TÍTULO PARCEIROS
-================================ */
 window.addEventListener("load", function () {
-  // Preloader
   const preloader = document.getElementById("preloader");
   if (preloader) {
     setTimeout(() => {
@@ -11,7 +7,6 @@ window.addEventListener("load", function () {
     }, 2200);
   }
 
-  // Título animado dos parceiros
   const phrase =
     "Clareza nas informações, confiança nos resultados. Veja alguns colaboradores que trabalham conosco por anos nessa caminhada.";
   const titleEl = document.getElementById("animated-title");
@@ -24,9 +19,6 @@ window.addEventListener("load", function () {
   }
 });
 
-/* ==============================
-   MENU HAMBÚRGUER
-================================ */
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 
@@ -37,9 +29,6 @@ if (hamburger && mobileMenu) {
   });
 }
 
-/* ==============================
-   ANIMAÇÃO PARCEIROS (HOVER)
-================================ */
 function animateWords() {
   const titleEl = document.getElementById("animated-title");
   if (!titleEl) return;
@@ -62,9 +51,6 @@ function resetWords() {
   });
 }
 
-/* ==============================
-   FORMULÁRIO DE CONTATO
-================================ */
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contato-form");
   const mensagem = document.getElementById("mensagem-enviada");
@@ -98,9 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-/* ==============================
-   FAQ ACCORDION
-================================ */
 const questions = document.querySelectorAll(".faq-question");
 
 if (questions.length) {
@@ -116,3 +99,4 @@ if (questions.length) {
     });
   });
 }
+
