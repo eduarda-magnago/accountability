@@ -58,56 +58,6 @@ body {
   to { width: 100%; }
 }
 
-/* Hero Section */
-.hero-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.logo-principal{
-  width: 150px;
-  height: 40px;
-  cursor: pointer;
-}
-
-.logo-mobile-header{
-  width: 135px !important;
-  height: 40px !important;
-  cursor: pointer;
-}
-
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.picture-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 700px;
-  z-index: 0;
-  pointer-events: none;
-}
-
-video::-webkit-media-controls,
-video::-webkit-media-controls-panel,
-video::-internal-media-controls-overlay-cast-button {
-  display: none !important;
-}
-
-video {
-  -webkit-picture-in-picture: none !important;
-}
-
 /* Navbar */
 .navbar {
   position: relative;
@@ -190,6 +140,18 @@ video {
   cursor: pointer;
 }
 
+.logo-principal{
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.logo-mobile-header{
+  width: 135px !important;
+  height: 40px !important;
+  cursor: pointer;
+}
+
 /* Navbar Mobile */
 @media (max-width: 768px) {
   .navbar-fixed-mobile {
@@ -203,7 +165,7 @@ video {
   }
 
   .logo-mobile-header {
-    margin-right: 20px;
+    margin-right: 20px; 
   }
 
   .contact-btn {
@@ -215,7 +177,7 @@ video {
   }
 }
 
-/* NAVBAR MENU MOBILE - Para telas pequenas (celulares pequenos) */
+/* Navbar Mobile */
 @media (max-width: 480px) {
   .navbar-fixed-mobile {
     padding: 0 10px; 
@@ -236,7 +198,23 @@ video {
   }
 }
 
-/* Hero Text */
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.picture-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .hero-text {
   position: relative;
   z-index: 2;
@@ -247,7 +225,7 @@ video {
 }
 
 .hero-section {
-  padding-top: 80px; /* ou o valor da altura da sua navbar */
+  padding-top: 80px; 
 }
 
 .subheading {
@@ -311,7 +289,6 @@ video {
   text-align: left;
 }
 
-/* Grade dos números */
 .numbers-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 2fr));
@@ -332,13 +309,50 @@ video {
   font-weight: 400;
   color: #131313;
   line-height: 1.5;
-  text-align: left; /* Não justificado */
+  text-align: left; 
 }
 
+/*Mobile para Números*/
 @media (max-width: 768px){
   .numbers-subtitle{
     margin: 0;
-    text-align: left
+    text-align: left;
+    font-size: 15px;
+    padding: 0 15px;
+  }
+
+  .numbers-container {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .numbers-title {
+    font-size: 28px;
+    text-align: left;
+  }
+
+  .numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px 20px;
+    justify-items: center;
+  }
+
+  .number-item {
+    text-align: center;
+  }
+
+  .number-item h3 {
+    font-size: 48px;
+  }
+
+  .number-item p {
+    font-size: 15px;
+    width: 100%;
+    max-width: 180px;
+    text-align: left;
+    padding: 0 10px;
+    margin: 0 auto;
   }
 }
 
@@ -366,6 +380,21 @@ video {
   margin: 0 auto;
   line-height: 1.7;
   text-align: justify;
+}
+
+/*Mobile para History*/
+@media (max-width: 768px){
+  .history-title {
+    text-align: left; 
+    padding: 0 15px;
+    font-size: 28px;
+  }
+
+  .history-text {
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 15px;
+  }
 }
 
 /*Sessão das Especialidades*/
@@ -436,6 +465,36 @@ video {
   font-weight: 400;
   line-height: 1.6;
   text-align: justify;
+}
+
+/*Responsividade da Seção Especialidades*/
+@media (max-width: 992px) {
+  .specialties-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .specialties-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .specialties-title {
+    font-size: 40px;
+  }
+
+  .specialties-subtitle {
+    font-size: 18px;
+  }
+
+  .logo-preloader{
+    width: 400px;
+    height: auto;
+  }
+
+  .footer-links-column {
+    transform: none;
+  }
 }
 
 /*Seção dos Valores*/
@@ -552,6 +611,7 @@ video {
   border-radius: 30px;
 }
 
+/*Mobile para Values Section*/
 @media (max-width: 768px){
   .values-title{
     font-size: 35px;
@@ -567,6 +627,30 @@ video {
     text-justify: inter-word;
     word-wrap: break-word;
     overflow-wrap: break-word;
+  }
+}
+
+/* Responsividade dos Valores */
+@media (max-width: 1024px) {
+  .values-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .values-text {
+    max-width: 100%;
+  }
+
+  .values-image {
+    max-width: 100%;
+  }
+
+  .value-description {
+    font-size: 24px;
+  }
+
+  .footer-links-column {
+    transform: none;
   }
 }
 
@@ -669,7 +753,7 @@ video {
   transition: opacity 0.2s ease;
 }
 
-/*media queries para partners*/
+/*Mobile para empresas parceiras*/
 @media (max-width: 768px) {
   .partners-title {
     font-size: 28px;
@@ -719,7 +803,6 @@ video {
   line-height: 1.4;
 }
 
-/* Cards */
 .segmentos-cards {
   display: flex;
   flex-wrap: wrap;
@@ -782,7 +865,7 @@ video {
   height: 400px;
 }
 
-/* Responsividade da Seção de Segmentos */
+/*Responsividade da Seção de Segmentos*/
 @media (max-width: 768px) {
   .segmentos-title {
     font-size: 28px;
@@ -831,7 +914,7 @@ video {
   }
 }
 
-/* Seção de Contato */
+/*Seção de Contato*/
 .contato-section {
   padding: 80px 40px;
   background-color:#ffffff;
@@ -878,7 +961,6 @@ video {
   max-width: 700px;
 }
 
-/* Informações de Contato */
 .contato-info {
   display: flex;
   gap: 40px;
@@ -923,7 +1005,6 @@ video {
   font-size: 16px;
 }
 
-/* Formulário */
 .contato-form {
   display: flex;
   flex-direction: column;
@@ -935,7 +1016,6 @@ video {
   gap: 20px;
 }
 
-/* Grupo label + campo */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -943,7 +1023,6 @@ video {
   width: 100%;
 }
 
-/* Títulos dos campos */
 .form-group label {
   font-size: 14px;
   font-weight: 500;
@@ -951,7 +1030,6 @@ video {
   font-family: 'Inter', sans-serif;
 }
 
-/* Campos */
 .contato-form input,
 .contato-form textarea {
   border: 1px solid #CFCFCF;
@@ -966,7 +1044,6 @@ video {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Foco */
 .contato-form input:focus,
 .contato-form textarea:focus {
   border-color: #9DA27C;
@@ -977,7 +1054,6 @@ video {
   resize: none;
 }
 
-/* Botão */
 .form-button-wrapper {
   display: flex;
   justify-content: flex-end;
@@ -1297,21 +1373,7 @@ video {
   transform: translateX(-40px);
 }
 
-@media (max-width: 768px) {
-  .logo-img {
-    content: url("images/preloader.png");
-    width: 180px;
-    height: 90px;
-    margin-top: 20px;
-  }
-
-  .footer-logo {
-    margin: 0 auto;
-    text-align: center;
-  }
-}
-
-/* MOBILE RESPONSIVO para o FOOTER*/
+/* MOBILE para o FOOTER*/
 @media (max-width: 768px) {
   .footer-top {
     align-items: start;
@@ -1322,12 +1384,15 @@ video {
   .footer-logo {
     margin-bottom: 0px;
     margin-top: 20px;
+    text-align: center;
   }
 
   .logo-img {
-    margin: 0;
+    content: url("images/preloader.png");
     width: 350px;
-    height: auto;          
+    height: auto;
+    margin-top: 20px;
+    margin: 0;
   }
 
   .footer-bottom {
@@ -1340,64 +1405,37 @@ video {
     text-align: start;
     flex: none;
   }
-}
-
-/* Responsividade dos Valores */
-@media (max-width: 1024px) {
-  .values-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .values-text {
-    max-width: 100%;
-  }
-
-  .values-image {
-    max-width: 100%;
-  }
-
-  .value-description {
-    font-size: 24px;
-  }
-
-  .saiba-mais-btn {
-    font-size: 22px;
-  }
 
   .footer-links-column {
     transform: none;
   }
 }
 
-/* Responsivo */
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  background-color: rgba(242, 243, 244, 0.98);
-  padding: 14px;
-  border-radius: 12px;
-  position: fixed;
-  top: 35%;
-  left: 50%;
-  transform: translate(-0.50%, -50%);
-  width: 35%;
-  max-width: 320px;
-}
-
-.mobile-menu a {
-  color: #131313;
-  text-decoration: none;
-  font-size: 16px;
-  margin-bottom: 12px;
-}
-
-
 /* Responsivo para mobile */
 @media (max-width: 768px) {
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(242, 243, 244, 0.98);
+    padding: 14px;
+    border-radius: 12px;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-0.50%, -50%);
+    width: 35%;
+    max-width: 320px;
+  }
+
+  .mobile-menu a {
+    color: #131313;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
 
   .logo-preloader{
-    width: 230px;
+    width: 220px;
     height: auto;
   }
 
@@ -1448,91 +1486,6 @@ video {
   .hero-text {
     max-width: 350px;
   }
-
-  .numbers-container {
-    padding-left: 0;
-    text-align: center;
-  }
-
-  .numbers-title {
-    font-size: 28px;
-    text-align: left;
-  }
-
-  .numbers-subtitle {
-    font-size: 15px;
-    margin-bottom: 30px;
-    text-align: left;
-    padding: 0 15px;
-  }
-
-  .numbers-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 30px 20px;
-    justify-items: center;
-  }
-
-  .number-item {
-    text-align: center;
-  }
-
-  .number-item h3 {
-    font-size: 48px;
-  }
-
-  .number-item p {
-    font-size: 15px;
-    width: 100%;
-    max-width: 180px;
-    text-align: left;
-    padding: 0 10px;
-    margin: 0 auto;
-  }
-
-  .history-title {
-    text-align: left; /* Para mobile */
-    padding: 0 15px;
-    font-size: 28px;
-  }
-
-  .history-text {
-    font-size: 15px;
-    line-height: 1.6;
-    padding: 0 15px;
-  }
-
-  .footer-links-column {
-    transform: none;
-  }
 }
 
-/* Responsividade da Seção Especialidades */
-@media (max-width: 992px) {
-  .specialties-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 600px) {
-  .specialties-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .specialties-title {
-    font-size: 40px;
-  }
-
-  .specialties-subtitle {
-    font-size: 18px;
-  }
-
-  .logo-preloader{
-    width: 400px;
-    height: auto;
-  }
-
-  .footer-links-column {
-    transform: none;
-  }
-}
